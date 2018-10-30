@@ -3,4 +3,4 @@ from flaskr import app
 
 @app.route('/')
 def show_entries():
-    return render_template('layout.html')
+    return render_template('index.html')
