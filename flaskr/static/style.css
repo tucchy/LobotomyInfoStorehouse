@@ -4,7 +4,10 @@ h1{
 h2{
     color: blue;
 }
-
+section{
+background-color: black;
+color:white;
+}
 .tabs {
 margin-top: 50px;
 padding-bottom: 40px;
