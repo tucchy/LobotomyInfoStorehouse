@@ -45,6 +45,8 @@ padding: 40px 40px 0;
 clear: both;
 overflow: hidden;
 height:100%;
+background-color: black;
+color:white;
 }
 /*選択されているタブのコンテンツのみを表示*/
 #all:checked ~ #all_content,
