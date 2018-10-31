@@ -1,4 +1,28 @@
 {% extends "layout.html" %}
 {% block body %}
-<h1>Lobotomy Info Storehouse</h1>
+<section>
+<div class="tabs">
+  <input id="radio1" type="radio" name="tab_item" checked>
+  <label id="tab1" class="tab_item" for="radio1">作業</label>
+  <input id="radio2" type="radio" name="tab_item">
+  <label id="tab2"class="tab_item" for="radio2">クリフォトカウンター</label>
+  <input id="radio3" type="radio" name="tab_item">
+  <label id="tab3"class="tab_item" for="radio3">E.G.O</label>
+  <div class="tab_content" id="radio1_content">
+    <div class="tab_content_description">
+      <p class="c-txtsp">作業の内容がここに入ります</p>
+    </div>
+  </div>
+  <div class="tab_content" id="radio2_content">
+    <div class="tab_content_description">
+      <p class="c-txtsp">クリフォトカウンターの内容がここに入ります</p>
+    </div>
+  </div>
+  <div class="tab_content" id="radio3_content">
+    <div class="tab_content_description">
+      <p class="c-txtsp">E.G.Oの内容がここに入ります</p>
+    </div>
+  </div>
+</div>
+</section>
 {% endblock %}

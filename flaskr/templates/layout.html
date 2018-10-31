@@ -1,9 +1,14 @@
-<title>Flaskr</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<div class=page>
-  <h1>Flaskr</h1>
+<head>
+<title>ロボトミ記憶貯蔵庫</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css.css') }}">
+</head>
+<body>
+<main>
+<article>
   {% for message in get_flashed_messages() %}
     <div class=flash>{{ message }}</div>
   {% endfor %}
   {% block body %}{% endblock %}
-</div>
+</article>
+</main>
+</body>

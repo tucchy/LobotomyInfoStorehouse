@@ -1,0 +1,88 @@
+@charset "UTF-8";
+h1 {
+  color: blue;
+}
+
+h2 {
+  color: blue;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  background-color: #2B2B2B;
+  color: white;
+}
+
+.tabs {
+  display: grid;
+  grid-template-rows: 1fr 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "contents-panel contents-panel contents-panel" "tab1 tab2 tab3";
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/*タブのスタイル*/
+.tab_item {
+  width: calc(100%/3);
+  height: 50px;
+  background-color: #FAF99F;
+  line-height: 50px;
+  font-size: 1rem;
+  text-align: center;
+  color: #565656;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+#tab1 {
+  grid-area: tab1;
+}
+
+#tab2 {
+  grid-area: tab2;
+}
+
+#tab3 {
+  grid-area: tab3;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  grid-area: contents-panel;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+  background-color: #2B2B2B;
+  color: white;
+}
+
+/*選択されているタブのコンテンツのみを表示*/
+#radio1:checked ~ #radio1_content,
+#radio2:checked ~ #radio2_content,
+#radio3:checked ~ #radio3_content {
+  display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+  background-color: #FC3A3A;
+  color: #000000;
+  font-size: 1.25rem;
+}
