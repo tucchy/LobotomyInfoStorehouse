@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <head>
 <title>ロボトミ記憶貯蔵庫</title>
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css.css') }}">
@@ -6,25 +5,10 @@
 <body>
 <main>
 <article>
-=======
-<head>
-<title>ロボトミ記憶貯蔵庫</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-<main>
-<article>
-  <h1>ロボトミ記憶貯蔵庫</h1>
->>>>>>> deaf5170b67f2fbaea7ec5638cdc36dc47b81ce0
   {% for message in get_flashed_messages() %}
     <div class=flash>{{ message }}</div>
   {% endfor %}
   {% block body %}{% endblock %}
-<<<<<<< HEAD
 </article>
 </main>
-=======
-</article>
-</main>
->>>>>>> deaf5170b67f2fbaea7ec5638cdc36dc47b81ce0
 </body>
