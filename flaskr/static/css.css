@@ -1,12 +1,4 @@
 @charset "UTF-8";
-h1 {
-  color: blue;
-}
-
-h2 {
-  color: blue;
-}
-
 body {
   margin: 0;
 }
@@ -18,22 +10,31 @@ section {
 
 .tabs {
   display: grid;
-  grid-template-rows: 1fr 100px;
+  grid-template-rows: 5rem 1fr 6rem;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "contents-panel contents-panel contents-panel" "tab1 tab2 tab3";
-  background-color: #fff;
+  grid-template-areas: "title title title" "contents-panel contents-panel contents-panel" "tab1 tab2 tab3";
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
   margin: 0 auto;
 }
 
+.tabs h2 {
+  grid-area: title;
+  text-align: center;
+  font-weight: bold;
+  height: 5rem;
+  font-size: 3rem;
+  margin: 0;
+  padding: 1rem;
+}
+
 /*タブのスタイル*/
 .tab_item {
   width: calc(100%/3);
-  height: 100px;
+  height: 6rem;
   background-color: #FAF99F;
-  line-height: 100px;
+  line-height: 6rem;
   font-size: 2rem;
   text-align: center;
   color: #565656;
@@ -98,6 +99,6 @@ input[name="tab_item"] {
   margin: 1rem;
 }
 
-.tab-content-description .abn-info {
+.tab-content-description .info-wrappter {
   margin: 1rem;
 }

@@ -1,36 +1,42 @@
-{% extends "layout.html" %}
-{% block body %}
-<section>
-<div class="tabs">
-  <input id="radio1" type="radio" name="tab_item" checked>
-  <label id="tab1" class="tab_item" for="radio1">作業</label>
-  <input id="radio2" type="radio" name="tab_item">
-  <label id="tab2"class="tab_item" for="radio2">特殊能力</label>
-  <input id="radio3" type="radio" name="tab_item">
-  <label id="tab3"class="tab_item" for="radio3">E.G.O</label>
-  <div class="tab-content" id="radio1_content">
-    <div class="tab-content-description">
-      <img src="../static/abnormality/F-01-57.png">
-      <div class="abn-info">
-        <div class="abn-name">赤ずきんの傭兵</div>
-        <div class="abn-code">F-01-57</div>
-        <div class="abn-ebox">20</div>
-        <div class="abn-atk-type">RED</div>
-        <div class="abn-risk">WAW</div>
-        <div class="abn-escape">脱走する恐れあり</div>
+{% extends "layout.html" %} {% block body %}
+<main>
+  <article>
+    <section>
+
+    </section>
+    <section>
+      <div class="tabs">
+        <h2 class="info-title">赤ずきんの傭兵</h2>
+        <input id="radio1" type="radio" name="tab_item" checked>
+        <label id="tab1" class="tab_item" for="radio1">作業</label>
+        <input id="radio2" type="radio" name="tab_item">
+        <label id="tab2" class="tab_item" for="radio2">特殊能力</label>
+        <input id="radio3" type="radio" name="tab_item">
+        <label id="tab3" class="tab_item" for="radio3">E.G.O</label>
+        <div class="tab-content" id="radio1_content">
+          <div class="tab-content-description">
+            <img src="../static/abnormality/F-01-57.png">
+            <div class="info-wrapper">
+              <div class="abn-code">F-01-57</div>
+              <div class="abn-ebox">20</div>
+              <div class="abn-atk-type">RED</div>
+              <div class="abn-risk">WAW</div>
+              <div class="abn-escape">脱走する恐れあり</div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="radio2_content">
+          <div class="tab-content-description">
+            <p class="c-txtsp">特殊能力の内容がここに入ります</p>
+          </div>
+        </div>
+        <div class="tab-content" id="radio3_content">
+          <div class="tab-content-description">
+            <p class="c-txtsp">E.G.Oの内容がここに入ります</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="tab-content" id="radio2_content">
-    <div class="tab-content-description">
-      <p class="c-txtsp">特殊能力の内容がここに入ります</p>
-    </div>
-  </div>
-  <div class="tab-content" id="radio3_content">
-    <div class="tab-content-description">
-      <p class="c-txtsp">E.G.Oの内容がここに入ります</p>
-    </div>
-  </div>
-</div>
-</section>
+    </section>
+  </article>
+</main>
 {% endblock %}

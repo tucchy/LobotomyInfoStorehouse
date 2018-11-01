@@ -1,11 +1,6 @@
-$tab-height:100px;
+$tab-height:6rem;
+$info-title-height:5rem;
 
-h1{
-    color: blue;
-}
-h2{
-    color: blue;
-}
 body{
     margin:0;
 }
@@ -16,19 +11,28 @@ color:white;
 
 .tabs {
 display:grid;
-grid-template-rows: 1fr $tab-height;
+grid-template-rows:$info-title-height 1fr $tab-height;
 grid-template-columns: 1fr 1fr 1fr;
-grid-template-areas: "contents-panel contents-panel contents-panel" "tab1 tab2 tab3";
-
-background-color: #fff;
+grid-template-areas: "title title title" "contents-panel contents-panel contents-panel" "tab1 tab2 tab3";
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 width: 100%;
 height: 100%;
-margin: 0 auto;}
+margin: 0 auto;
+
+    h2{
+        grid-area: title;
+        text-align: center;
+        font-weight:bold;
+        height:$info-title-height;
+        font-size: 3rem;
+        margin: 0;
+        padding: 1rem;
+    }
+}
 /*タブのスタイル*/
 .tab_item {
 width: calc(100%/3);
-height: 100px;
+height: $tab-height;
 background-color: #FAF99F;
 line-height: $tab-height;
 font-size: 2rem;
@@ -86,7 +90,7 @@ font-size: 2.5rem;
     img{
         margin: 1rem;
     }
-    .abn-info{
+    .info-wrappter{
         margin: 1rem;
         .abn-name{
 
